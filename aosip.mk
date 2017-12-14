@@ -20,13 +20,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from oneplus2 device
 $(call inherit-product, device/oneplus/oneplus2/device.mk)
 
-# Inherit some common AOSiP stuff.
-$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
+# Inherit some common Nitrogen stuff.
+$(call inherit-product, vendor/nitrogen/products/common.mk)
 
-PRODUCT_NAME := aosip_oneplus2
+# Inherit from hardware-specific part of the product configuration
+$(call inherit-product, device/oneplus/oneplus2/device.mk)
+
+PRODUCT_NAME := nitrogen_oneplus2
 PRODUCT_DEVICE := oneplus2
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
+PRODUCT_MODEL := OnePlus
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
