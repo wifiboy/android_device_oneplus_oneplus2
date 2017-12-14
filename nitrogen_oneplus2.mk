@@ -26,6 +26,10 @@ $(call inherit-product, vendor/nitrogen/products/common.mk)
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/oneplus/oneplus2/device.mk)
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
+
 PRODUCT_NAME := nitrogen_oneplus2
 PRODUCT_DEVICE := oneplus2
 PRODUCT_MANUFACTURER := OnePlus
